@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title><%= title%></title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="maindiv">
+            <h1 id="maintitle" style="color: black;">TODO App</h1>
+            <form action="/" method="POST">
+                <div id="description">
+                    <label id="desc" for="task">DESCRIPTION</label><br>
+                    <input id="descinput" placeholder="What Do You Need To Do?" type="text" id="fname" name="task"><br>
+                </div>
+                <div id="category">
+                    <label id="catg" for="cars">CATEGORY</label><br>
+                    <select name="category" id="cars">
+                        <option value=null>Choose A Category</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="School">School</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div id=datepicker>
+                    <label id="datee" for="date">DUE DATE</label><br>
+                    <input type="date" id="datepick" name="date">
+                </div>
+                <div id="add">
+                    <i id="addicon" style="color: white; font-size: 23px;" class="fas fa-plus"></i>
+                    <input id="addbutton" type="submit" value="Add Task">
+                </div>
+                
+                
+                <div id="border">
+
+                </div>
+            </form>
+            <form action="/delete" method="POST" id="second">
+                <% for(let i of arr){ %>
+                    <br>
+                    <br>
+                    <div id="whole">
+
+                    
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value=<%= i._id %>>
+                        <label id="tasks" style="color: grey;" for="vehicle1"> <%= i.task%></label>
+                        <% if(i.category=="Work"){ %>
+                            <div id="cat" style="background-color: red;">
+                                <label style="color: white;" for="vehicle1"> <%= i.category%></label><br>
+                            </div>
+                        <%}%>
+                        <% if(i.category=="Personal"){ %>
+                            <div id="cat" style="background-color: purple;">
+                                <label style="color: white;" for="vehicle1"> <%= i.category%></label><br>
+                            </div>
+                        <%}%>
+                        <% if(i.category=="School"){ %>
+                            <div id="cat" style="background-color: blue;">
+                                <label style="color: white;" for="vehicle1"> <%= i.category%></label><br>
+                            </div>
+                        <%}%>
+                        <% if(i.category=="Other"){ %>
+                            <div id="cat" style="background-color: yellow;">
+                                <label style="color: white;" for="vehicle1"> <%= i.category%></label><br>
+                            </div>
+                        <%}%>
+                        <br>
+                        <i id="left" style="color: grey;" class="fas fa-calendar-alt"></i> <label id="date" for="vehicle1"> <%= i.date%></label><br>
+                        <br>
+                        <br>
+                    </div>
+                <%}%>
+                <div id="delete">
+                    <i id="delicon" style="color: white; font-size: 23px;" class="fas fa-trash-alt"></i>
+                    <input id="del" style="color: white; background-color: rgb(223, 15, 15); border: none;" type="submit" value="Delete Task">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

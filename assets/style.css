@@ -1,0 +1,266 @@
+body{
+    background-image: url('bg.jpg');
+    font-family: 'Roboto', sans-serif;
+}
+@keyframes borderColor {
+    12.5% {
+      border-color: #FF0000;
+    }
+    25% {
+      border-color: #FFA500;
+    }
+    37.5% {
+      border-color: #FFFF00;
+    }
+    50% {
+      border-color: #7FFF00;
+    }
+    62.5% {
+      border-color: #00FFFF;
+    }
+    75% {
+      border-color: #0000FF;
+    }
+    87.5% {
+     border-color: #9932CC;
+    }
+    100% {
+      border-color: #FF1493;
+    }
+  }
+#maindiv{
+    position:absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    border: 3px solid black;
+    animation: borderColor 3s infinite ease-in-out;
+    border-radius: 35px;
+}
+
+#maintitle{
+    text-align: center;
+    font-family: 'Squada One', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+#description{
+    width: 99%;
+    height: 50px;
+    padding-bottom: 5px;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    animation: borderColor 3s infinite ease-in-out;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 6px;
+    padding-left: 10px;
+}
+
+#desc{
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+#descinput{
+    border:none;
+    width: 100%;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+select{
+    border:none;
+    width: 100%;
+    padding-left: 6px;
+    padding-top: 8px;
+}
+option{
+    font-family: 'Roboto', sans-serif;
+    padding-left: 6px;
+    
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+#category{
+    height: 50px;
+    width: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 2px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 6px;
+    
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    animation: borderColor 3s infinite ease-in-out;
+}
+
+#catg{
+    padding-left: 10px;
+}
+#datepicker{
+    position: absolute;
+    top: 141.4px;
+    left: 50%;
+    width: 50%;
+    padding-top: 6px;
+    height: 50px;
+    border-bottom: 2px solid lightgray;
+    animation: borderColor 3s infinite ease-in-out;
+}
+#datee{
+    
+    
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 12px;
+}
+
+#datepick{
+    position: relative;
+    top:6px;
+    width: 96%;
+    left: 10px;
+    border:none;
+}
+
+#add{
+    width: 160px;
+    height: 50px;
+    border: none;
+    background-color:rgb(36, 33, 33);
+    color: white;
+    position: absolute;
+    top: 230px;
+    left: 29%;
+}
+
+#addbutton{
+    font-size: 20px;
+    position: relative;
+    top: 13px;
+    left: 14px;
+    border: none;
+    background-color:rgb(36, 33, 33);
+    color: white;
+}
+
+#addicon{
+    position: relative;
+    top: 13.3px;
+    left: 10px;
+}
+#delicon{
+    position: relative;
+    top: 13.3px;
+    left: 10px;
+}
+#delete{
+    position: fixed ;
+    top: 307.3px;
+    left: 54%;
+    width: 160px;
+    height: 50px;
+    border: none;
+    background-color:rgb(223, 15, 15);
+    font-size: 14px;
+    
+}
+
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+  
+  }
+  a:hover {
+    color: white;
+   
+  }
+  a:active {
+    color: white;
+  }
+  #del{
+    font-size: 20px;
+    position: relative;
+    top: 13px;
+    left: 12%;
+    
+  }
+#border{
+    height: 2px;
+    width: 100%;
+    border-bottom: 2px solid lightgray;
+    animation: borderColor 3s infinite ease-in-out;
+    position: absolute;
+    top: 312px;
+}
+
+#second{
+    position: absolute;
+    top: 320px;
+    left: 20px;
+    height: 230px;
+    overflow: scroll;
+    width: 100%;
+    
+}
+#second::-webkit-scrollbar {
+    display: none;
+}
+
+#left{
+    top: -60px;
+    position: relative;
+    left: 33px;
+}
+#date{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    top: -60px;
+    left: 34px;
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+}
+input[type="checkbox"]{
+    width: 20px; /*Desired width*/
+    height: 20px; /*Desired height*/
+}
+#tasks{
+    font-size: larger;
+    position: relative;
+    top: -3px;
+}
+#cat{
+    position: relative;
+    left: 700px;
+    top: -25px;
+    height: 35px;
+    width: 100px;
+    background-color: lightpink;
+    border-bottom: 2px solid lightgray;
+    animation: borderColor 3s infinite ease-in-out;
+    text-align: center;
+    padding-top: 18px;
+}
+
+#whole{
+    height: 90px;
+    border-bottom: 2px solid lightgray;
+    animation: borderColor 3s infinite ease-in-out;
+    width: 96%;
+}
+
+input[type=checkbox]:checked + label {
+    text-decoration: line-through;
+} 
